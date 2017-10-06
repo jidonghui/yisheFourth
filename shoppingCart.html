@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>衣舍-购物车中心</title>
+		<link rel="stylesheet" type="text/css" href="common/public.css"/>
+		<link rel="stylesheet" type="text/css" href="common/nav.css"/>
+		<link rel="stylesheet" type="text/css" href="common/map.css"/>
+		<link rel="stylesheet" type="text/css" href="common/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shoppingCart.css"/>
+	</head>
+	<body>
+		<!--nav-->
+		<div class="nav">
+		</div>
+		<!--map-->
+		<div class="map">
+		</div>
+		<!--header-->
+		<div class="cartHeader">
+			<div class="cartHeader_con">
+				<div class="headerLeft">
+					<a href="#"></a>
+				</div>
+				<div class="headerRight">
+					
+				</div>
+			</div>
+		</div>
+		<!--warmTip-->
+		<div class="warmTip">
+			<div class="warmTip_con">
+				<span>温馨提示：</span>现在&nbsp;<a href="">登录</a>&nbsp;，把心仪的商品保存在“购物车”
+			</div>
+		</div>
+		<div class="cartList">
+			<div class="cartList_con">
+				<div class="listTop">
+					<ul>
+						<li>商品名称</li>
+						<li>售价</li>
+						<li>数量</li>
+						<li>小计</li>
+						<li>操作</li>
+					</ul>
+				</div>
+				<div class="listBot">
+					<div class="listCenter">
+						<div class="cartImg">
+						</div>
+						<div class="selectGoods">
+							<p>您的购物车内没有商品，请挑选心仪的商品吧！</p>
+							<a href="">去挑选喜欢的商品</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--recommend-->
+		<div class="recommend">
+			<div class="recommend_con">
+				<div class="recTop">
+					<p>韩都官网为您推荐</p>
+					<span>
+						<a href="">最近浏览过的商品</a>
+						<a href="">最近收藏的</a>						
+					</span>
+				</div>
+				<div class="recBot">
+					
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div class="footer">
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	
+//隐藏和显示
+function showDom(dom){
+	dom.css("display","block");
+}
+
+function hideDom(dom){
+	dom.css("display","none");
+}
+
+$(function(){
+	
+	$(".nav").load("common/nav.html");
+	$(".map").load("common/map.html");
+	$(".footer").load("common/footer.html");
+
+	//nav
+	//划过网站导航
+	$("#dhId").mouseover(
+		function(){
+			showDom($("#mapId"));
+		}	
+	);
+	$("#dhId").mouseout(
+		function(){
+			hideDom($("#mapId"));
+		}
+	);
+	$("#mapId").mouseover(
+		function(){
+			showDom($("#mapId"));
+		}
+	);
+	$("#mapId").mouseout(
+		
+		function(){
+			hideDom($("#mapId"));
+		}
+	);
+	
+	
+	
+	/*
+	$(".recTop").children("a").eq(0).click(
+		function(){
+			$(this).css({"color":"#ffffff","background":"#8a8a8a"});
+		}
+	)
+	$(".recTop").children("a").eq(1).click(
+		function(){
+			$(this).css({"color":"#8a8a8a","background":"#ffffff"});
+		}
+	)
+	*/
+	
+});
+</script>
